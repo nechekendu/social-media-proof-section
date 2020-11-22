@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .container {
+        position: absolute;
+      }
+      .grid-container {
+        width: auto;
+        height: 700px;
+        display: grid;
+        margin: -500px 200px;
+        grid-template-columns: 200px auto;
+        justify-content: center;
+        grid-auto-rows: minmax(100px, 250px);
+        background-color: transparent;
+        z-index: 2;
+      }
+      .grid-items {
+        max-width: 100%;
+      }
+
+      .grid-item-1 {
+        width: 300px;
+        max-width: 300px  ;
+        grid-column: 1 / 3;
+      }
+      .grid-item-1 h1 {
+        color: rgb(104, 22, 104);
+        font-size: 36px;
+        background-color: transparent;
+        text-align: left;
+      }
+      .grid-item-1  p {
+        color: rgb(190, 21, 176);
+        font-size: 12px;
+      }
+      .grid-item-2 {
+        grid-column: 4 / 6;
+      }
+      .grid-item-2 ul {
+        list-style: none;
+      }
+      .grid-item-3 {
+        grid-column: 1 / 2;
+        background-color: rgb(63, 4, 58);
+        width: 250px;
+        height: 230px;
+        border-radius: 15px;
+
+      }
+      .grid-item-3 p{
+        font-size: 14px;
+        padding: 10px;
+      }
+      .grid-item-3 div {
+        display: flex;
+        padding: 5px;
+        font-size: 12px;
+      }
+      .grid-item-3 div div  {
+        display: grid;
+        margin: -10px 10px;
+        padding: 5px;
+        font-size: 12px;
+      }
+      .grid-item-3 div div p {
+        margin-bottom: -15px;
+      }
+      .grid-item-3 img {
+        border-radius: 50%;
+        width: 20%;
+        margin: auto 0;
+      }
+      .grid-item-4 {
+        grid-column: 3 / 4;
+        background-color: rgb(63, 4, 58);
+        width: 240px;
+        height: 230px;
+        border-radius: 15px;
+        margin-left: -30px;
+        margin-top: 20px;
+      }
+      .grid-item-4 p{
+        font-size: 14px;
+        padding: 10px;
+      }
+      .grid-item-4 div {
+        display: flex;
+        padding: 5px;
+        font-size: 12px;
+      }
+      .grid-item-4 div div  {
+        display: grid;
+        margin: -10px 10px;
+        padding: 5px;
+        font-size: 12px;
+      }
+      .grid-item-4 div div p {
+        margin-bottom: -15px;
+      }
+      .grid-item-4 img {
+        border-radius: 50%;
+        width: 20%;
+        margin: auto 0;
+      }
+      .grid-item-5 {
+        grid-column: 5 / 6;
+        background-color: rgb(63, 4, 58);
+        width: 240px;
+        height: 230px;
+        border-radius: 15px;
+        margin-left: 30px;
+        margin-top: 30px;
+      }
+      .grid-item-5 p{
+        font-size: 14px;
+        padding: 10px;
+      }
+      .grid-item-5 div {
+        display: flex;
+        padding: 5px;
+        font-size: 12px;
+      }
+      .grid-item-5 div div  {
+        display: grid;
+        margin: -10px 10px;
+        padding: 5px;
+        font-size: 12px;
+      }
+      .grid-item-5 div div p {
+        margin-bottom: -15px;
+      }
+      .grid-item-5 img {
+        border-radius: 50%;
+        width: 20%;
+        margin: auto 0;
+      }
+      li {
+         background-color: rgb(241, 241, 241);
+         padding: 7px;
+         margin-bottom: 10px;
+         border-radius: 10px;
+         color: rgb(104, 22, 104);
+         font-size: 14px;
+      }
+      li:nth-child(2) {
+        margin-left: 40px;
+      }
+      li:nth-child(3) {
+        margin-left: 80px;
+      }
+      ion-icon {
+        color: rgb(255, 153, 0);
+        padding-right: 5px;
+      }
+      .bottom {
+        margin-top: -180px;
+        margin-left: 290px;
+        width: 100%;     
+      }
+      .bottom .svg-bottom {
+        width: 80%;
+        height: 63vh;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="svg-container top">
+        <img src="./images/bg-pattern-top-desktop.svg" class="svg svg-top">
+      </div>
+      
+      <div class="svg-container bottom">
+        <img src="./images/bg-pattern-bottom-desktop.svg" class="svg svg-bottom">
+      </div>
+       <div class="overlay-container"></div>
+
+       <!--  Content -->
+      <div class="grid-container">
+      <div class="grid-items grid-item-1"><h1>10,000+ of our users love our products.
+      </h1>
+    <p> We only provide great products combined with excellent customer service.
+      See what our satisfied customers are saying about our services.</p></div>
+      <div class="grid-items grid-item-2">
+        <ul>
+        <li><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon> <strong>Rated 5 Stars in Reviews</strong></li>
+        <li><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon> <strong>Rated 5 Stars in Report Guru</strong></li>
+        <li><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon> <strong>Rated 5 Stars in BestTech</strong></li>
+      </ul></div>
+      <div class="grid-items grid-item-3">
+        <div><img src="./images/image-colton.jpg">
+          <div>
+          <p>Colton Smith</p>
+        <p style="color:  rgb(255, 153, 0);">Verified Buyer</p>
+      </div>
+        </div> 
+        <p>"We needed the same printed design as the one we had ordered a week prior.
+        Not only did they find the original order, but we also received it in time.
+        Excellent!"</p></div>
+      <div class="grid-items grid-item-4">
+       <div><img src="./images/image-irene.jpg">
+        <div>
+        <p>Irene Roberts </p>
+      <p style="color:  rgb(255, 153, 0);">Verified Buyer</p>
+    </div>
+      </div>
+        <p>"Customer service is always excellent and very quick turn around. Completely
+        delighted with the simplicity of the purchase and the speed of delivery."</p></div>
+      <div class="grid-items grid-item-5">
+        <div><img src="./images/image-anne.jpg">
+          <div>
+          <p>Anne Wallace </p>
+        <p style="color:  rgb(255, 153, 0);">Verified Buyer</p>
+      </div>
+        </div>
+        <p>"Put an order with this company and can only praise them for the very high
+        standard. Will definitely use them again and recommend them to everyone!"</p></div>
+
+    </div>
+
+    <!-- footer -->
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  
+  </div>
+
+    <!-- Ionicons script tag -->
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  </body>
+</html>
